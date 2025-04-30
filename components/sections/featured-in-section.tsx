@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function FeaturedInSection() {
 	const sectionRef = useRef<HTMLDivElement>(null);
@@ -10,11 +10,10 @@ export function FeaturedInSection() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".featured-item",
+					animate(".featured-item", {
 						opacity: [0, 1],
 						scale: [0.9, 1],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

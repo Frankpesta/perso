@@ -5,23 +5,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { AnimatedChart } from "@/components/ui/animated-chart";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function HeroSection() {
 	const heroRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (heroRef.current) {
-			anime({
-				targets: ".hero-animate-item",
+			animate(".hero-animate-item", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100, { start: 300 }),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 
-			anime({
-				targets: ".hero-bg-dots",
+			animate(".hero-bg-dots", {
 				opacity: [0, 0.3],
 				delay: 800,
 				duration: 1500,

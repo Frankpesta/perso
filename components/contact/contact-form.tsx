@@ -21,23 +21,21 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/components/ui/use-toast";
-import anime from "animejs";
+import { toast } from "sonner";
+import { animate } from "animejs";
 
 export function ContactForm() {
 	const [isLoading, setIsLoading] = useState(false);
-	const { toast } = useToast();
 	const formRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".form-animate",
+					animate(".form-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();
@@ -60,11 +58,7 @@ export function ContactForm() {
 		// Simulate form submission
 		setTimeout(() => {
 			setIsLoading(false);
-			toast({
-				title: "Message sent",
-				description:
-					"We've received your message and will get back to you soon.",
-			});
+			toast("We have received your message and we will get back to you soon.");
 		}, 1500);
 	};
 

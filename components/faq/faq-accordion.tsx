@@ -7,7 +7,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function FaqAccordion() {
 	const accordionRef = useRef<HTMLDivElement>(null);
@@ -16,11 +16,10 @@ export function FaqAccordion() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".faq-item",
+					animate(".faq-item", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

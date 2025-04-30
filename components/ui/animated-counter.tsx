@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 interface AnimatedCounterProps {
 	value: number;
@@ -16,7 +16,7 @@ export function AnimatedCounter({
 }: AnimatedCounterProps) {
 	const [displayValue, setDisplayValue] = useState(0);
 	const counterRef = useRef<HTMLSpanElement>(null);
-	const animationRef = useRef<anime.AnimeInstance | null>(null);
+	const animationRef = useRef<any>(null);
 	const [hasAnimated, setHasAnimated] = useState(false);
 
 	useEffect(() => {
@@ -26,8 +26,7 @@ export function AnimatedCounter({
 					if (counterRef.current) {
 						const obj = { count: 0 };
 
-						animationRef.current = anime({
-							targets: obj,
+						animationRef.current = animate(obj, {
 							count: value,
 							round: 1,
 							easing: "easeOutExpo",

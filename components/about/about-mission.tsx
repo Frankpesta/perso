@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function AboutMission() {
 	const missionRef = useRef<HTMLDivElement>(null);
@@ -11,11 +11,10 @@ export function AboutMission() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".mission-card",
+					animate(".mission-card", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

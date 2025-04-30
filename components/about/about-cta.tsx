@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function AboutCta() {
 	const ctaRef = useRef<HTMLDivElement>(null);
@@ -13,11 +13,10 @@ export function AboutCta() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".about-cta-animate",
+					animate(".about-cta-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

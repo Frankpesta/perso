@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Link from "next/link";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function PlanTabs() {
 	const [activeTab, setActiveTab] = useState("crypto");
@@ -23,8 +23,7 @@ export function PlanTabs() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".tabs-animate",
+					animate(".tabs-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
 						easing: "easeOutQuad",
@@ -43,11 +42,10 @@ export function PlanTabs() {
 	}, []);
 
 	useEffect(() => {
-		anime({
-			targets: ".plan-card",
+		animate(".plan-card", {
 			opacity: [0, 1],
 			translateY: [20, 0],
-			delay: anime.stagger(100),
+			delay: 100,
 			easing: "easeOutQuad",
 		});
 	}, [activeTab]);

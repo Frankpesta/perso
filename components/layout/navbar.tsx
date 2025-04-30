@@ -17,7 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function Navbar() {
 	const pathname = usePathname();
@@ -41,11 +41,10 @@ export function Navbar() {
 
 	useEffect(() => {
 		if (isMounted) {
-			anime({
-				targets: ".nav-item",
+			animate(".nav-item", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100, { start: 300 }),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}
@@ -199,9 +198,14 @@ export function Navbar() {
 								<span className="sr-only">Toggle menu</span>
 							</Button>
 						</SheetTrigger>
-						<SheetContent side="right">
-							<div className="grid gap-6 py-6">
+						<SheetContent side="right" title="Menu">
+							<div className="grid gap-6 py-12 px-4">
 								<div className="grid gap-3">
+									<Link
+										href="/"
+										className="font-medium hover:text-foreground transition-colors">
+										Home
+									</Link>
 									<h3 className="text-lg font-semibold">Services</h3>
 									<div className="grid gap-2">
 										<Link

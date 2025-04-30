@@ -25,9 +25,6 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<head>
 				<link rel="icon" href="/favicon.ico" sizes="any" />
-				<script
-					src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-					async></script>
 			</head>
 			<body className={inter.className}>
 				<ThemeProvider
@@ -39,7 +36,7 @@ export default function RootLayout({
 						<Suspense>
 							<Navbar />
 						</Suspense>
-						<main className="flex-1">{children}</main>
+						<main className="">{children}</main>
 						<Footer />
 					</div>
 					<Toaster />

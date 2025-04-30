@@ -1,19 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import * as animeJs from "animejs";
-const anime = animeJs.default;
+import { animate } from "animejs";
 
 export function TermsHeader() {
 	const headerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (headerRef.current) {
-			anime({
-				targets: ".terms-header-animate",
+			animate(".terms-header-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

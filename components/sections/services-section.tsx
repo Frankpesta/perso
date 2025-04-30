@@ -18,7 +18,7 @@ import {
 	PiggyBank,
 	Users,
 } from "lucide-react";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function ServicesSection() {
 	const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,11 +27,10 @@ export function ServicesSection() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".service-card",
+					animate(".service-card", {
 						opacity: [0, 1],
 						translateY: [50, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

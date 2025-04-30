@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function TestimonialsSection() {
 	const sectionRef = useRef<HTMLDivElement>(null);
@@ -15,11 +15,10 @@ export function TestimonialsSection() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".testimonial-animate",
+					animate(".testimonial-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();
@@ -63,8 +62,7 @@ export function TestimonialsSection() {
 		if (isAnimating) return;
 		setIsAnimating(true);
 
-		anime({
-			targets: ".testimonial-card",
+		animate(".testimonial-card", {
 			opacity: [1, 0],
 			translateX: [0, -20],
 			easing: "easeInQuad",
@@ -74,8 +72,7 @@ export function TestimonialsSection() {
 					prev === 0 ? testimonials.length - 1 : prev - 1
 				);
 
-				anime({
-					targets: ".testimonial-card",
+				animate(".testimonial-card", {
 					opacity: [0, 1],
 					translateX: [20, 0],
 					easing: "easeOutQuad",
@@ -90,8 +87,7 @@ export function TestimonialsSection() {
 		if (isAnimating) return;
 		setIsAnimating(true);
 
-		anime({
-			targets: ".testimonial-card",
+		animate(".testimonial-card", {
 			opacity: [1, 0],
 			translateX: [0, 20],
 			easing: "easeInQuad",
@@ -101,8 +97,7 @@ export function TestimonialsSection() {
 					prev === testimonials.length - 1 ? 0 : prev + 1
 				);
 
-				anime({
-					targets: ".testimonial-card",
+				animate(".testimonial-card", {
 					opacity: [0, 1],
 					translateX: [-20, 0],
 					easing: "easeOutQuad",

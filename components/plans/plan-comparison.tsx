@@ -10,7 +10,7 @@ import {
 	TableRow,
 } from "@/components/ui/table";
 import { Check, X } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function PlanComparison() {
 	const comparisonRef = useRef<HTMLDivElement>(null);
@@ -19,11 +19,10 @@ export function PlanComparison() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".comparison-animate",
+					animate(".comparison-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();
