@@ -5,6 +5,7 @@ import { ServiceHowItWorks } from "@/components/services/service-how-it-works";
 import { ServiceFaq } from "@/components/services/service-faq";
 import { ServiceCta } from "@/components/services/service-cta";
 import { getServiceData } from "@/lib/services";
+import type { Metadata } from "next";
 
 export const dynamicParams = false;
 
@@ -18,11 +19,13 @@ export function generateStaticParams() {
 	];
 }
 
-interface PageProps {
-	params: { service: string };
+interface Props {
+	params: {
+		service: string;
+	};
 }
 
-export function generateMetadata({ params }: PageProps) {
+export function generateMetadata({ params }: Props): Metadata {
 	const serviceData = getServiceData(params.service);
 
 	if (!serviceData) {
@@ -37,7 +40,7 @@ export function generateMetadata({ params }: PageProps) {
 	};
 }
 
-export default function ServicePage({ params }: PageProps) {
+export default function ServicePage({ params }: Props) {
 	const serviceData = getServiceData(params.service);
 
 	if (!serviceData) {
