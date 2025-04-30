@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import anime from "animejs";
+import { animate } from "animejs";
 
 interface ServiceHeaderProps {
 	title: string;
@@ -21,11 +21,10 @@ export function ServiceHeader({
 
 	useEffect(() => {
 		if (headerRef.current) {
-			anime({
-				targets: ".service-header-animate",
+			animate(".service-header-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

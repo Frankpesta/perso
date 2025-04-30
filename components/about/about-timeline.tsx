@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function AboutTimeline() {
 	const timelineRef = useRef<HTMLDivElement>(null);
@@ -10,16 +10,14 @@ export function AboutTimeline() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".timeline-item",
+					animate(".timeline-item", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(200),
+						delay: 200,
 						easing: "easeOutQuad",
 					});
 
-					anime({
-						targets: ".timeline-line",
+					animate(".timeline-line", {
 						height: ["0%", "100%"],
 						delay: 500,
 						duration: 1500,

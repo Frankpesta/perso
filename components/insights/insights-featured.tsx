@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function InsightsFeatured() {
 	const featuredRef = useRef<HTMLDivElement>(null);
@@ -15,11 +15,10 @@ export function InsightsFeatured() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".featured-insight-animate",
+					animate(".featured-insight-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

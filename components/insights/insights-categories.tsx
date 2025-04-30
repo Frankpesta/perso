@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function InsightsCategories() {
 	const [activeCategory, setActiveCategory] = useState("all");
@@ -12,11 +12,10 @@ export function InsightsCategories() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".category-button",
+					animate(".category-button", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(50),
+						delay: 50,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

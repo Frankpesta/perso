@@ -2,18 +2,17 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function AboutHero() {
 	const heroRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (heroRef.current) {
-			anime({
-				targets: ".about-hero-animate",
+			animate(".about-hero-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

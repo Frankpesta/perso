@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useEffect, useRef } from "react";
 import {
 	Card,
@@ -9,13 +7,14 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import anime from "animejs";
+import { animate } from "animejs";
+import { IconMap } from "@/components/icon-map";
 
 interface ServiceFeaturesProps {
 	features: {
 		title: string;
 		description: string;
-		icon: React.ReactNode;
+		icon: string; // Changed from React.ReactNode to string
 	}[];
 }
 
@@ -26,11 +25,10 @@ export function ServiceFeatures({ features }: ServiceFeaturesProps) {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".feature-card",
+					animate(".feature-card", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: (el, i) => 100 * i,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();
@@ -57,7 +55,9 @@ export function ServiceFeatures({ features }: ServiceFeaturesProps) {
 						key={index}
 						className="feature-card opacity-0 border border-border/50 transition-all duration-200 hover:border-primary/50 hover:shadow-md">
 						<CardHeader>
-							<div className="mb-4 text-primary">{feature.icon}</div>
+							<div className="mb-4 text-primary">
+								<IconMap name={feature.icon} className="w-6 h-6" />
+							</div>
 							<CardTitle>{feature.title}</CardTitle>
 							<CardDescription>{feature.description}</CardDescription>
 						</CardHeader>

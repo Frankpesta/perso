@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function PlanTestimonials() {
 	const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -12,11 +12,10 @@ export function PlanTestimonials() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".plan-testimonial",
+					animate(".plan-testimonial", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

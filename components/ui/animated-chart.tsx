@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "next-themes";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function AnimatedChart() {
 	const chartRef = useRef<HTMLDivElement>(null);
@@ -118,8 +118,7 @@ export function AnimatedChart() {
 			path.style.strokeDasharray = pathLength.toString();
 			path.style.strokeDashoffset = pathLength.toString();
 
-			anime({
-				targets: path,
+			animate(path, {
 				strokeDashoffset: [pathLength, 0],
 				duration: 2000,
 				delay: delay,
@@ -142,8 +141,7 @@ export function AnimatedChart() {
 					circle.setAttribute("fill", color);
 					svg.appendChild(circle);
 
-					anime({
-						targets: circle,
+					animate(circle, {
 						r: [0, 4],
 						opacity: [0, 1],
 						duration: 800,

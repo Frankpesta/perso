@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Users, Lightbulb, Gem, Globe, Zap } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function AboutValues() {
 	const valuesRef = useRef<HTMLDivElement>(null);
@@ -12,11 +12,10 @@ export function AboutValues() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".value-card",
+					animate(".value-card", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

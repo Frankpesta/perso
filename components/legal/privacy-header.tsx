@@ -1,20 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-// Update the import statement for anime.js
-import * as animeJs from "animejs";
-const anime = animeJs.default;
+import { animate } from "animejs";
 
 export function PrivacyHeader() {
 	const headerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (headerRef.current) {
-			anime({
-				targets: ".privacy-header-animate",
+			animate(".privacy-header-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

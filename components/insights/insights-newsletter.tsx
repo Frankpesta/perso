@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function InsightsNewsletter() {
 	const newsletterRef = useRef<HTMLDivElement>(null);
@@ -13,11 +13,10 @@ export function InsightsNewsletter() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".newsletter-animate",
+					animate(".newsletter-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

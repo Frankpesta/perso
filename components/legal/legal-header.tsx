@@ -1,18 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import anime from "animejs/lib/anime.es.js";
+import { animate } from "animejs";
 
 export function LegalHeader() {
 	const headerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (headerRef.current) {
-			anime({
-				targets: ".legal-header-animate",
+			animate(".legal-header-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

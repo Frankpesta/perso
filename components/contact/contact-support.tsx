@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, PhoneCall, MessageSquare } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function ContactSupport() {
 	const supportRef = useRef<HTMLDivElement>(null);
@@ -12,11 +12,10 @@ export function ContactSupport() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".support-animate",
+					animate(".support-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

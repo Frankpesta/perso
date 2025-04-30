@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function ContactOffices() {
 	const officesRef = useRef<HTMLDivElement>(null);
@@ -12,11 +12,10 @@ export function ContactOffices() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".office-animate",
+					animate(".office-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

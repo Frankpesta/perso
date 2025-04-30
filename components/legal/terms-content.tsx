@@ -2,9 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-// Update the import statement for anime.js
-import * as animeJs from "animejs";
-const anime = animeJs.default;
+import { animate } from "animejs";
 
 export function TermsContent() {
 	const contentRef = useRef<HTMLDivElement>(null);
@@ -13,11 +11,10 @@ export function TermsContent() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".terms-content-animate",
+					animate(".terms-content-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

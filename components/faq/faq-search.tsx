@@ -3,18 +3,17 @@
 import { useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import anime from "animejs";
+import { animate } from "animejs";
 
 export function FaqSearch() {
 	const searchRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (searchRef.current) {
-			anime({
-				targets: ".search-animate",
+			animate(".search-animate", {
 				opacity: [0, 1],
 				translateY: [20, 0],
-				delay: anime.stagger(100),
+				delay: 100,
 				easing: "easeOutQuad",
 			});
 		}

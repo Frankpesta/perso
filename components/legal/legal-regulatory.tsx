@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import * as animeJs from "animejs";
-const anime = animeJs.default;
+import { animate } from "animejs";
 
 export function LegalRegulatory() {
 	const regulatoryRef = useRef<HTMLDivElement>(null);
@@ -12,11 +11,10 @@ export function LegalRegulatory() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".legal-regulatory-animate",
+					animate(".legal-regulatory-animate", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 					observer.disconnect();

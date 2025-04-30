@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import anime from "animejs";
+import { animate } from "animejs";
 
 interface ServiceHowItWorksProps {
 	steps: {
@@ -18,16 +18,14 @@ export function ServiceHowItWorks({ steps }: ServiceHowItWorksProps) {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					anime({
-						targets: ".step-card",
+					animate(".step-card", {
 						opacity: [0, 1],
 						translateY: [20, 0],
-						delay: anime.stagger(100),
+						delay: 100,
 						easing: "easeOutQuad",
 					});
 
-					anime({
-						targets: ".step-line",
+					animate(".step-line", {
 						height: ["0%", "100%"],
 						delay: 500,
 						duration: 1500,
