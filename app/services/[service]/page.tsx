@@ -18,7 +18,11 @@ export function generateStaticParams() {
 	];
 }
 
-export function generateMetadata({ params }: { params: { service: string } }) {
+interface PageProps {
+	params: { service: string };
+}
+
+export function generateMetadata({ params }: PageProps) {
 	const serviceData = getServiceData(params.service);
 
 	if (!serviceData) {
@@ -33,11 +37,7 @@ export function generateMetadata({ params }: { params: { service: string } }) {
 	};
 }
 
-export default function ServicePage({
-	params,
-}: {
-	params: { service: string };
-}) {
+export default function ServicePage({ params }: PageProps) {
 	const serviceData = getServiceData(params.service);
 
 	if (!serviceData) {
