@@ -300,14 +300,14 @@ export function PlanTabs() {
 				value={activeTab}
 				onValueChange={setActiveTab}
 				className="w-full">
-				<TabsList className="tabs-animate opacity-0 grid grid-cols-2 md:grid-cols-5 w-full mb-8">
+				<TabsList className="tabs-animate opacity-0 grid grid-cols-3 gap-4 md:gap-0 md:grid-cols-5 w-full mb-8">
 					{services.map((service) => (
 						<TabsTrigger key={service.id} value={service.id}>
 							{service.name}
 						</TabsTrigger>
 					))}
 				</TabsList>
-				<TabsContent value={activeTab} className="mt-0">
+				<TabsContent value={activeTab} className="mt-14 md:mt-0">
 					<div className="grid gap-8 md:grid-cols-3">
 						{currentPlans.map((plan, index) => (
 							<Card

@@ -24,6 +24,8 @@ export function HeroSection() {
 				delay: 800,
 				duration: 1500,
 				easing: "easeOutQuad",
+				loop: true,
+				autoplay: true,
 			});
 		}
 	}, []);

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { animate } from "animejs";
+import { animate, JSAnimation } from "animejs";
 
 interface AnimatedCounterProps {
 	value: number;
@@ -16,7 +16,7 @@ export function AnimatedCounter({
 }: AnimatedCounterProps) {
 	const [displayValue, setDisplayValue] = useState(0);
 	const counterRef = useRef<HTMLSpanElement>(null);
-	const animationRef = useRef<any>(null);
+	const animationRef = useRef<JSAnimation | null>(null); // Type for animate
 	const [hasAnimated, setHasAnimated] = useState(false);
 
 	useEffect(() => {
@@ -26,14 +26,15 @@ export function AnimatedCounter({
 					if (counterRef.current) {
 						const obj = { count: 0 };
 
+						// Use animate with correct options
 						animationRef.current = animate(obj, {
 							count: value,
-							round: 1,
-							easing: "easeOutExpo",
 							duration: duration,
 							delay: delay,
+							easing: "easeOutExpo",
+							round: 1, // Ensures integer values
 							update: () => {
-								setDisplayValue(obj.count);
+								setDisplayValue(Math.round(obj.count));
 							},
 							complete: () => {
 								setHasAnimated(true);
@@ -52,10 +53,10 @@ export function AnimatedCounter({
 		return () => {
 			observer.disconnect();
 			if (animationRef.current) {
-				animationRef.current.pause();
+				animationRef.current.cancel(); // Cancel the animation
 			}
 		};
-	}, [value, duration, delay, hasAnimated]);
+	}, [value, duration, delay]);
 
 	return <span ref={counterRef}>{displayValue}</span>;
 }
