@@ -19,14 +19,15 @@ export function generateStaticParams() {
 	];
 }
 
+// Define Props with params as a Promise
 interface Props {
-	params: {
-		service: string;
-	};
+	params: Promise<{ service: string }>;
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-	const serviceData = getServiceData(params.service);
+// Update generateMetadata to handle async params
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { service } = await params; // Await the params Promise
+	const serviceData = getServiceData(service);
 
 	if (!serviceData) {
 		return {
@@ -40,8 +41,10 @@ export function generateMetadata({ params }: Props): Metadata {
 	};
 }
 
-export default function ServicePage({ params }: Props) {
-	const serviceData = getServiceData(params.service);
+// Update the page component to handle async params
+export default async function ServicePage({ params }: Props) {
+	const { service } = await params; // Await the params Promise
+	const serviceData = getServiceData(service);
 
 	if (!serviceData) {
 		notFound();
@@ -57,7 +60,7 @@ export default function ServicePage({ params }: Props) {
 			<ServiceFeatures features={serviceData.features} />
 			<ServiceHowItWorks steps={serviceData.howItWorks} />
 			<ServiceFaq faqs={serviceData.faqs} />
-			<ServiceCta service={params.service} />
+			<ServiceCta service={service} />
 		</div>
 	);
 }

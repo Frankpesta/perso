@@ -20,6 +20,8 @@ export function TestimonialsSection() {
 						translateY: [20, 0],
 						delay: 100,
 						easing: "easeOutQuad",
+						autoplay: true,
+						loop: true,
 					});
 					observer.disconnect();
 				}
