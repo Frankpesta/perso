@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { AnimatedChart } from "@/components/ui/animated-chart";
 import { animate } from "animejs";
+import Image from "next/image";
 
 export function HeroSection() {
 	const heroRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,8 @@ export function HeroSection() {
 			});
 		}
 	}, []);
+
+	const userImages = ["/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg"];
 
 	return (
 		<div ref={heroRef} className="relative overflow-hidden">
@@ -61,9 +64,13 @@ export function HeroSection() {
 						</div>
 						<div className="hero-animate-item opacity-0 flex items-center gap-4 text-sm text-muted-foreground">
 							<div className="flex -space-x-2">
-								{[1, 2, 3, 4].map((i) => (
-									<div
+								{userImages.map((i) => (
+									<Image
 										key={i}
+										alt="User"
+										src={i}
+										width={50}
+										height={50}
 										className="h-8 w-8 rounded-full border-2 border-background bg-muted"
 									/>
 								))}

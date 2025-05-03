@@ -6,7 +6,7 @@ export function Footer() {
 	return (
 		<footer className="border-t bg-background">
 			<div className="container px-4 py-12 md:py-16 lg:py-20">
-				<div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+				<div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					<div className="space-y-4">
 						<div className="flex items-center space-x-2">
 							<svg
@@ -83,13 +83,6 @@ export function Footer() {
 						<ul className="space-y-2 text-sm">
 							<li>
 								<Link
-									href="/services/crypto"
-									className="text-muted-foreground hover:text-foreground transition-colors">
-									Crypto Investment
-								</Link>
-							</li>
-							<li>
-								<Link
 									href="/services/hedge-fund"
 									className="text-muted-foreground hover:text-foreground transition-colors">
 									Hedge Fund Management
@@ -102,6 +95,14 @@ export function Footer() {
 									Retirement Planning
 								</Link>
 							</li>
+							<li>
+								<Link
+									href="/services/crypto"
+									className="text-muted-foreground hover:text-foreground transition-colors">
+									Crypto Investment
+								</Link>
+							</li>
+
 							<li>
 								<Link
 									href="/services/real-estate"
@@ -197,23 +198,6 @@ export function Footer() {
 								</Link>
 							</li>
 						</ul>
-					</div>
-					<div className="space-y-4">
-						<h4 className="text-sm font-medium">Newsletter</h4>
-						<p className="text-sm text-muted-foreground">
-							Subscribe to our newsletter for the latest updates and investment
-							insights.
-						</p>
-						<div className="flex space-x-2">
-							<Input
-								type="email"
-								placeholder="Enter your email"
-								className="h-9"
-							/>
-							<Button type="submit" size="sm">
-								Subscribe
-							</Button>
-						</div>
 					</div>
 				</div>
 				<div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">

@@ -20,8 +20,6 @@ export function TestimonialsSection() {
 						translateY: [20, 0],
 						delay: 100,
 						easing: "easeOutQuad",
-						autoplay: true,
-						loop: true,
 					});
 					observer.disconnect();
 				}
@@ -42,21 +40,21 @@ export function TestimonialsSection() {
 				"InvestWise has transformed how I manage my investments. The platform is intuitive and the returns have been exceptional.",
 			author: "Sofia Davis",
 			title: "Entrepreneur",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/4.jpg",
 		},
 		{
 			quote:
 				"The crypto investment service has helped me navigate the complex world of digital assets with confidence and security.",
 			author: "Marcus Chen",
 			title: "Software Engineer",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/2.jpg",
 		},
 		{
 			quote:
 				"Setting up a college fund for my children was seamless with InvestWise. Their dedicated advisors made the process simple.",
 			author: "Amelia Rodriguez",
 			title: "Marketing Director",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/3.jpg",
 		},
 	];
 
