@@ -39,7 +39,7 @@ export function AboutHero() {
 			</div>
 			<div className="about-hero-animate opacity-0 relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
 				<Image
-					src="/placeholder.svg?height=400&width=600"
+					src="/about.jpg"
 					alt="About InvestWise"
 					fill
 					className="object-cover"

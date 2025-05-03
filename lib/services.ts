@@ -23,8 +23,8 @@ const services: Record<string, ServiceData> = {
 	crypto: {
 		title: "Crypto Investment",
 		description:
-			"Invest in cryptocurrencies with our expert guidance and portfolio management tools.",
-		image: "/placeholder.svg?height=400&width=600",
+			"Unlock the potential of your financial future with our cutting-edge cryptocurrency advisory service. Whether you're a beginner or a seasoned investor, we provide expert guidance, personalized strategies, and powerful portfolio management tools to navigate the fast-paced crypto market. Stay ahead with real-time market analytics, secure asset storage, and tailored insights designed to maximize returns and minimize risks. Join our community of savvy investors and take control of your wealth in the digital age.",
+		image: "/crypto.jpg",
 		features: [
 			{
 				title: "Diversified Crypto Portfolio",
@@ -60,15 +60,16 @@ const services: Record<string, ServiceData> = {
 		howItWorks: [
 			{
 				title: "Account Setup",
-				description: "Create a dedicated investment account for your child.",
+				description: "Create a dedicated investment account for yourself.",
 			},
 			{
 				title: "Goal Definition",
-				description: "Define specific financial goals for your child's future.",
+				description:
+					"Define specific financial goals for choosing to invest in crypto currencies..",
 			},
 			{
 				title: "Investment Selection",
-				description: "Choose from age-appropriate investment strategies.",
+				description: "Choose from the range of available crypto investments.",
 			},
 			{
 				title: "Regular Contributions",
@@ -112,7 +113,7 @@ const services: Record<string, ServiceData> = {
 		title: "Hedge Fund Management",
 		description:
 			"Access exclusive hedge funds with lower entry barriers and professional management.",
-		image: "/placeholder.svg?height=400&width=600",
+		image: "/hedge-fund.jpg",
 		features: [
 			{
 				title: "Exclusive Fund Access",
@@ -204,7 +205,7 @@ const services: Record<string, ServiceData> = {
 		title: "Retirement Planning",
 		description:
 			"Secure your future with our retirement advisory services and personalized plans.",
-		image: "/placeholder.svg?height=400&width=600",
+		image: "/retirement.jpg",
 		features: [
 			{
 				title: "Personalized Retirement Plans",
@@ -291,7 +292,7 @@ const services: Record<string, ServiceData> = {
 		title: "Real Estate Investment",
 		description:
 			"Diversify your portfolio with real estate investments and property management.",
-		image: "/placeholder.svg?height=400&width=600",
+		image: "/real-estate.jpg",
 		features: [
 			{
 				title: "Diversified Property Exposure",
@@ -378,7 +379,7 @@ const services: Record<string, ServiceData> = {
 		title: "Children Investment",
 		description:
 			"Start building wealth for your children's future with dedicated investment accounts.",
-		image: "/placeholder.svg?height=400&width=600",
+		image: "/children.jpg",
 		features: [
 			{
 				title: "Education Savings Plans",
