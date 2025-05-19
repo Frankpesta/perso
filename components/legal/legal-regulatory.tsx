@@ -39,14 +39,18 @@ export function LegalRegulatory() {
 				<CardContent className="prose dark:prose-invert max-w-none">
 					<h3>Regulatory Status</h3>
 					<p>
-						InvestWise is registered as a financial services provider with the
-						appropriate regulatory authorities in the jurisdictions where we
-						operate. Our services are subject to oversight by these regulatory
-						bodies to ensure compliance with applicable laws and regulations.
+						Base Investment Group Limited is registered as a financial services
+						provider with the appropriate regulatory authorities in the
+						jurisdictions where we operate. Our services are subject to
+						oversight by these regulatory bodies to ensure compliance with
+						applicable laws and regulations.
 					</p>
 
 					<h3>Licensing Information</h3>
-					<p>InvestWise holds the following licenses and registrations:</p>
+					<p>
+						Base Investment Group Limited holds the following licenses and
+						registrations:
+					</p>
 					<ul>
 						<li>
 							Securities and Exchange Commission (SEC) - Registered Investment
@@ -67,8 +71,9 @@ export function LegalRegulatory() {
 
 					<h3>Compliance</h3>
 					<p>
-						InvestWise is committed to maintaining the highest standards of
-						compliance with all applicable laws and regulations, including:
+						Base Investment Group Limited is committed to maintaining the
+						highest standards of compliance with all applicable laws and
+						regulations, including:
 					</p>
 					<ul>
 						<li>Anti-Money Laundering (AML) regulations</li>
@@ -80,11 +85,11 @@ export function LegalRegulatory() {
 
 					<h3>Investor Protection</h3>
 					<p>
-						Client accounts at InvestWise are protected by the Securities
-						Investor Protection Corporation (SIPC) up to $500,000, including a
-						maximum of $250,000 for cash claims. SIPC protection does not cover
-						market losses or protect against the decline in value of your
-						securities.
+						Client accounts at Base Investment Group Limited are protected by
+						the Securities Investor Protection Corporation (SIPC) up to
+						$500,000, including a maximum of $250,000 for cash claims. SIPC
+						protection does not cover market losses or protect against the
+						decline in value of your securities.
 					</p>
 					<p>
 						For more information about SIPC coverage, please visit{" "}

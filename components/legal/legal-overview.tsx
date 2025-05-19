@@ -38,10 +38,10 @@ export function LegalOverview() {
 				</CardHeader>
 				<CardContent className="prose dark:prose-invert max-w-none">
 					<p>
-						InvestWise is a financial services platform that provides investment
-						services to individuals and institutions. This page contains
-						important legal information that governs your use of our services
-						and website.
+						Base Investment Group Limited is a financial services platform that
+						provides investment services to individuals and institutions. This
+						page contains important legal information that governs your use of
+						our services and website.
 					</p>
 					<p>
 						The information provided on this website is for general
@@ -50,15 +50,16 @@ export function LegalOverview() {
 						qualified professionals before making any investment decisions.
 					</p>
 					<p>
-						InvestWise is registered as a financial services provider and
-						operates in compliance with applicable laws and regulations. Our
-						services are subject to the terms and conditions outlined in our
-						service agreements, which you should review carefully before using
-						our platform.
+						Base Investment Group Limited is registered as a financial services
+						provider and operates in compliance with applicable laws and
+						regulations. Our services are subject to the terms and conditions
+						outlined in our service agreements, which you should review
+						carefully before using our platform.
 					</p>
 					<p>
-						By accessing and using the InvestWise platform, you acknowledge that
-						you have read, understood, and agree to be bound by our{" "}
+						By accessing and using the Base Investment Group Limited platform,
+						you acknowledge that you have read, understood, and agree to be
+						bound by our{" "}
 						<a href="/terms" className="text-primary hover:underline">
 							Terms and Conditions
 						</a>{" "}

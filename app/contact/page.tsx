@@ -5,7 +5,7 @@ import { ContactSupport } from "@/components/contact/contact-support";
 import { ContactSocial } from "@/components/contact/contact-social";
 
 export const metadata = {
-	title: "Contact Us | InvestWise",
+	title: "Contact Us | Base Investment Group Limited",
 	description:
 		"Get in touch with our team for support, inquiries, or to learn more about our investment services",
 };

@@ -37,7 +37,7 @@ export function TestimonialsSection() {
 	const testimonials = [
 		{
 			quote:
-				"InvestWise has transformed how I manage my investments. The platform is intuitive and the returns have been exceptional.",
+				"Base Investment Group Limited has transformed how I manage my investments. The platform is intuitive and the returns have been exceptional.",
 			author: "Sofia Davis",
 			title: "Entrepreneur",
 			image: "/4.jpg",
@@ -51,7 +51,7 @@ export function TestimonialsSection() {
 		},
 		{
 			quote:
-				"Setting up a college fund for my children was seamless with InvestWise. Their dedicated advisors made the process simple.",
+				"Setting up a college fund for my children was seamless with Base Investment Group Limited. Their dedicated advisors made the process simple.",
 			author: "Amelia Rodriguez",
 			title: "Marketing Director",
 			image: "/3.jpg",
@@ -118,7 +118,7 @@ export function TestimonialsSection() {
 				</h2>
 				<p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
 					Hear from investors who have transformed their financial future with
-					InvestWise.
+					Base Investment Group Limited.
 				</p>
 			</div>
 

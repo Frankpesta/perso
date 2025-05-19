@@ -36,11 +36,12 @@ export function PrivacyContent() {
 				<CardContent className="p-6 md:p-8 prose dark:prose-invert max-w-none">
 					<h2>1. Introduction</h2>
 					<p>
-						InvestWise, Inc. ("InvestWise," "we," "us," or "our") is committed
-						to protecting your privacy. This Privacy Policy explains how we
-						collect, use, disclose, and safeguard your information when you use
-						our website, mobile applications, and investment services
-						(collectively, the "Services").
+						Base Investment Group Limited, Inc. ("Base Investment Group
+						Limited," "we," "us," or "our") is committed to protecting your
+						privacy. This Privacy Policy explains how we collect, use, disclose,
+						and safeguard your information when you use our website, mobile
+						applications, and investment services (collectively, the
+						"Services").
 					</p>
 					<p>
 						Please read this Privacy Policy carefully. By accessing or using our
@@ -302,7 +303,7 @@ export function PrivacyContent() {
 						Privacy Policy or our privacy practices, please contact us at:
 					</p>
 					<p>
-						InvestWise, Inc.
+						Base Investment Group Limited, Inc.
 						<br />
 						Attn: Privacy Officer
 						<br />
@@ -310,7 +311,7 @@ export function PrivacyContent() {
 						<br />
 						New York, NY 10005
 						<br />
-						Email: privacy@investwise.com
+						Email: privacy@Base Investment Group Limited.com
 						<br />
 						Phone: +1 (212) 555-0123
 					</p>

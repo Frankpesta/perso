@@ -42,7 +42,7 @@ export function AboutTimeline() {
 			year: "2018",
 			title: "Company Founded",
 			description:
-				"InvestWise was founded with a mission to democratize investing.",
+				"Base Investment Group Limited was founded with a mission to democratize investing.",
 		},
 		{
 			year: "2019",

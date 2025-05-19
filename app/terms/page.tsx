@@ -2,9 +2,9 @@ import { TermsHeader } from "@/components/legal/terms-header";
 import { TermsContent } from "@/components/legal/terms-content";
 
 export const metadata = {
-	title: "Terms and Conditions | InvestWise",
+	title: "Terms and Conditions | Base Investment Group Limited",
 	description:
-		"Terms and conditions for using InvestWise's investment platform and services",
+		"Terms and conditions for using Base Investment Group Limited's investment platform and services",
 };
 
 export default function TermsPage() {

@@ -6,9 +6,9 @@ import { AboutValues } from "@/components/about/about-values";
 import { AboutCta } from "@/components/about/about-cta";
 
 export const metadata = {
-	title: "About Us | InvestWise",
+	title: "About Us | Base Investment Group Limited",
 	description:
-		"Learn about our mission, values, and the team behind InvestWise",
+		"Learn about our mission, values, and the team behind Base Investment Group Limited",
 };
 
 export default function AboutPage() {

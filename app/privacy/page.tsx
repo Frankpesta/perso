@@ -2,9 +2,9 @@ import { PrivacyHeader } from "@/components/legal/privacy-header";
 import { PrivacyContent } from "@/components/legal/privacy-content";
 
 export const metadata = {
-	title: "Privacy Policy | InvestWise",
+	title: "Privacy Policy | Base Investment Group Limited",
 	description:
-		"Privacy policy detailing how InvestWise collects, uses, and protects your personal information",
+		"Privacy policy detailing how Base Investment Group Limited collects, uses, and protects your personal information",
 };
 
 export default function PrivacyPage() {

@@ -6,7 +6,7 @@ import { InsightsNewsletter } from "@/components/insights/insights-newsletter";
 import { InsightsCta } from "@/components/insights/insights-cta";
 
 export const metadata = {
-	title: "Market Insights | InvestWise",
+	title: "Market Insights | Base Investment Group Limited",
 	description:
 		"Expert analysis, market trends, and investment insights to help you make informed decisions",
 };

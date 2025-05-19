@@ -40,18 +40,20 @@ export function LegalNotices() {
 					<h3>Copyright Notice</h3>
 					<p>
 						All content on this website, including text, graphics, logos,
-						images, audio clips, and software, is the property of InvestWise and
-						is protected by copyright laws. Unauthorized use, reproduction, or
-						distribution of any content from this website is strictly prohibited
-						without prior written permission from InvestWise.
+						images, audio clips, and software, is the property of Base
+						Investment Group Limited and is protected by copyright laws.
+						Unauthorized use, reproduction, or distribution of any content from
+						this website is strictly prohibited without prior written permission
+						from Base Investment Group Limited.
 					</p>
 
 					<h3>Trademark Notice</h3>
 					<p>
-						InvestWise, the InvestWise logo, and all product and service names,
-						designs, and slogans are trademarks or registered trademarks of
-						InvestWise or its affiliates. You may not use such marks without the
-						prior written permission of InvestWise.
+						Base Investment Group Limited, the Base Investment Group Limited
+						logo, and all product and service names, designs, and slogans are
+						trademarks or registered trademarks of Base Investment Group Limited
+						or its affiliates. You may not use such marks without the prior
+						written permission of Base Investment Group Limited.
 					</p>
 
 					<h3>Risk Disclosure</h3>
@@ -62,10 +64,10 @@ export function LegalNotices() {
 						investors may not get back the amounts originally invested.
 					</p>
 					<p>
-						Cryptocurrency investments are subject to high market risk.
-						InvestWise is not responsible for any direct, indirect, or
-						consequential losses as a result of investing in cryptocurrencies or
-						other digital assets.
+						Cryptocurrency investments are subject to high market risk. Base
+						Investment Group Limited is not responsible for any direct,
+						indirect, or consequential losses as a result of investing in
+						cryptocurrencies or other digital assets.
 					</p>
 
 					<h3>Forward-Looking Statements</h3>

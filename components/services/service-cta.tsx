@@ -43,7 +43,7 @@ export function ServiceCta({ service }: ServiceCtaProps) {
 			</h3>
 			<p className="service-cta-animate opacity-0 text-muted-foreground mb-8 max-w-2xl mx-auto">
 				Join thousands of investors who have already transformed their financial
-				future with InvestWise. Start building wealth today.
+				future with Base Investment Group Limited. Start building wealth today.
 			</p>
 			<div className="service-cta-animate opacity-0 flex flex-col sm:flex-row justify-center gap-4">
 				<Button size="lg" asChild>

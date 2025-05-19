@@ -44,12 +44,15 @@ export function HeroSection() {
 				<div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
 					<div className="space-y-8">
 						<h1 className="hero-animate-item opacity-0 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-							Built for the Future of{" "}
-							<span className="text-primary">Investing</span>
+							Build Wealth Intelligently.
+							<span className="text-primary">Invest Without Limits.</span>
 						</h1>
 						<p className="hero-animate-item opacity-0 text-xl text-muted-foreground md:text-2xl">
-							Analyze, buy, and invest with tools purpose-built for how you
-							build wealth.
+							At Base Investment Group Limited, we don’t just help you invest—we
+							empower you to grow wealth with confidence. From beginner
+							strategies to elite investment bundles, our expert-backed tools,
+							real-time insights, and premium advisory services are built to
+							match your ambition.
 						</p>
 						<div className="hero-animate-item opacity-0 flex flex-col sm:flex-row gap-4">
 							<Button size="lg" asChild>

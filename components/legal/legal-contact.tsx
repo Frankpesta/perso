@@ -40,15 +40,15 @@ export function LegalContact() {
 				</CardHeader>
 				<CardContent className="prose dark:prose-invert max-w-none">
 					<p>
-						For legal inquiries, notices, or concerns regarding InvestWise's
-						services, please contact our legal department:
+						For legal inquiries, notices, or concerns regarding Base Investment
+						Group Limited's services, please contact our legal department:
 					</p>
 
 					<div className="not-prose my-6 space-y-2">
 						<p>
 							<strong>Legal Department</strong>
 							<br />
-							InvestWise, Inc.
+							Base Investment Group Limited, Inc.
 							<br />
 							123 Wall Street, Suite 1500
 							<br />
@@ -58,7 +58,7 @@ export function LegalContact() {
 						</p>
 
 						<p>
-							<strong>Email:</strong> legal@investwise.com
+							<strong>Email:</strong> legal@Base Investment Group Limited.com
 							<br />
 							<strong>Phone:</strong> +1 (212) 555-0123
 						</p>

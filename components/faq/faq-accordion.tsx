@@ -37,9 +37,9 @@ export function FaqAccordion() {
 
 	const faqs = [
 		{
-			question: "What is InvestWise?",
+			question: "What is Base Investment Group Limited?",
 			answer:
-				"InvestWise is a comprehensive investment platform that offers a range of services including cryptocurrency investments, hedge fund management, retirement planning, real estate investments, and children's investment accounts. We provide tools, resources, and expert guidance to help you build and manage your investment portfolio.",
+				"Base Investment Group Limited is a comprehensive investment platform that offers a range of services including cryptocurrency investments, hedge fund management, retirement planning, real estate investments, and children's investment accounts. We provide tools, resources, and expert guidance to help you build and manage your investment portfolio.",
 		},
 		{
 			question: "How do I create an account?",
@@ -52,7 +52,8 @@ export function FaqAccordion() {
 				"Minimum investment amounts vary by service. Crypto investments start at $50, hedge fund investments at $5,000, retirement planning at $100, real estate investments at $1,000, and children's investment accounts at $50. Each service has different tiers with varying minimum requirements.",
 		},
 		{
-			question: "How secure is my investment with InvestWise?",
+			question:
+				"How secure is my investment with Base Investment Group Limited?",
 			answer:
 				"Security is our top priority. We implement bank-level encryption, two-factor authentication, and regular security audits. Your investments are protected by industry-leading security measures, and we maintain appropriate insurance coverage for added protection.",
 		},
@@ -62,7 +63,7 @@ export function FaqAccordion() {
 				"Yes, most investments can be withdrawn at any time without penalties. However, certain investment types may have specific terms regarding withdrawal periods. These details are clearly outlined before you make an investment.",
 		},
 		{
-			question: "What fees does InvestWise charge?",
+			question: "What fees does Base Investment Group Limited charge?",
 			answer:
 				"Our fee structure varies by service and investment tier. We charge a combination of management fees (typically 0.5% to 1.5% annually) and, in some cases, performance fees for exceptional returns. All fees are transparently disclosed before you invest.",
 		},
@@ -72,9 +73,9 @@ export function FaqAccordion() {
 				"You can track your investments through our user-friendly dashboard, which provides real-time updates on your portfolio performance. We also send regular performance reports via email, and you can set up custom alerts for specific market conditions or portfolio changes.",
 		},
 		{
-			question: "Is InvestWise available internationally?",
+			question: "Is Base Investment Group Limited available internationally?",
 			answer:
-				"Yes, InvestWise is available in most countries worldwide. However, certain services may have restrictions based on local regulations. Please check our Terms of Service or contact our support team for specific information about availability in your country.",
+				"Yes, Base Investment Group Limited is available in most countries worldwide. However, certain services may have restrictions based on local regulations. Please check our Terms of Service or contact our support team for specific information about availability in your country.",
 		},
 		{
 			question: "How do I get help if I have questions?",
@@ -83,9 +84,9 @@ export function FaqAccordion() {
 		},
 		{
 			question:
-				"What happens to my investments if InvestWise goes out of business?",
+				"What happens to my investments if Base Investment Group Limited goes out of business?",
 			answer:
-				"Your investments are held separately from InvestWise's operating funds and are not used for our business operations. In the unlikely event of our company's insolvency, your investments would remain yours and could be transferred to another custodian or returned to you.",
+				"Your investments are held separately from Base Investment Group Limited's operating funds and are not used for our business operations. In the unlikely event of our company's insolvency, your investments would remain yours and could be transferred to another custodian or returned to you.",
 		},
 	];
 

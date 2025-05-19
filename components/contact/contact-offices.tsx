@@ -33,22 +33,10 @@ export function ContactOffices() {
 
 	const offices = [
 		{
-			city: "New York",
-			address: "123 Wall Street, New York, NY 10005",
+			city: "Scotland",
+			address: "4 Milne Drive, Redding, Falkirk, Scotland",
 			phone: "+1 (212) 555-1234",
-			email: "newyork@investwise.com",
-		},
-		{
-			city: "London",
-			address: "45 Finsbury Square, London, EC2A 1HP",
-			phone: "+44 20 7123 4567",
-			email: "london@investwise.com",
-		},
-		{
-			city: "Singapore",
-			address: "10 Marina Boulevard, Singapore 018983",
-			phone: "+65 6123 4567",
-			email: "singapore@investwise.com",
+			email: "support@baseinvst.com",
 		},
 	];
 
