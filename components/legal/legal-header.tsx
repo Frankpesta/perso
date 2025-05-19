@@ -24,7 +24,7 @@ export function LegalHeader() {
 			</h1>
 			<p className="legal-header-animate opacity-0 text-xl text-muted-foreground max-w-3xl mx-auto">
 				Important legal information, regulatory details, and disclaimers
-				regarding InvestWise's investment services.
+				regarding Base Investment Group Limited's investment services.
 			</p>
 		</div>
 	);

@@ -34,21 +34,21 @@ export function PlanTestimonials() {
 	const testimonials = [
 		{
 			quote:
-				"The Basic plan was perfect for me to start my investment journey. The educational resources helped me understand the market better.",
+				"The Starter plan was perfect for me to start my investment journey. The educational resources helped me understand the market better.",
 			author: "Alex Johnson",
 			title: "Basic Plan User",
 			image: "/placeholder.svg?height=80&width=80",
 		},
 		{
 			quote:
-				"Upgrading to the Standard plan was a game-changer. The monthly portfolio rebalancing and tax optimization features have significantly improved my returns.",
+				"Upgrading to the Contract plan was a game-changer. The monthly portfolio rebalancing and tax optimization features have significantly improved my returns.",
 			author: "Sarah Williams",
 			title: "Standard Plan User",
 			image: "/placeholder.svg?height=80&width=80",
 		},
 		{
 			quote:
-				"As a Premium plan user, having a dedicated advisor has made all the difference. The personalized strategies have helped me achieve my financial goals faster than I expected.",
+				"As an Ultimate plan user, having a dedicated advisor has made all the difference. The personalized strategies have helped me achieve my financial goals faster than I expected.",
 			author: "Michael Chen",
 			title: "Premium Plan User",
 			image: "/placeholder.svg?height=80&width=80",

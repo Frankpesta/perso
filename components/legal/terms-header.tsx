@@ -23,8 +23,8 @@ export function TermsHeader() {
 				Terms and Conditions
 			</h1>
 			<p className="terms-header-animate opacity-0 text-xl text-muted-foreground max-w-3xl mx-auto">
-				Please read these terms and conditions carefully before using
-				InvestWise's services.
+				Please read these terms and conditions carefully before using Base
+				Investment Group Limited's services.
 			</p>
 			<p className="terms-header-animate opacity-0 text-sm text-muted-foreground mt-4">
 				Last updated: June 1, 2024

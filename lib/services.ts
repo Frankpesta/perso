@@ -160,7 +160,7 @@ const services: Record<string, ServiceData> = {
 			{
 				title: "Fund Your Investment",
 				description:
-					"Transfer funds to your InvestWise account to initiate your investment.",
+					"Transfer funds to your Base Investment Group Limited account to initiate your investment.",
 			},
 			{
 				title: "Regular Performance Updates",

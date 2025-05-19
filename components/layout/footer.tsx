@@ -20,7 +20,7 @@ export function Footer() {
 								className="h-6 w-6">
 								<path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
 							</svg>
-							<span className="font-bold">InvestWise</span>
+							<span className="font-bold">Base Investment Group Limited</span>
 						</div>
 						<p className="text-sm text-muted-foreground">
 							Building financial futures through smart investments.
@@ -201,7 +201,10 @@ export function Footer() {
 					</div>
 				</div>
 				<div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-					<p>© {new Date().getFullYear()} InvestWise. All rights reserved.</p>
+					<p>
+						© {new Date().getFullYear()} Base Investment Group Limited. All
+						rights reserved.
+					</p>
 				</div>
 			</div>
 		</footer>

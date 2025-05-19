@@ -11,7 +11,7 @@ import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "InvestWise | Modern Investment Platform",
+	title: "Base Investment Group Limited | Modern Investment Platform",
 	description:
 		"A comprehensive investment platform for crypto, hedge funds, retirement planning, real estate, and children's investments",
 };

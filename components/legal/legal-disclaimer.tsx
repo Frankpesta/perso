@@ -40,9 +40,10 @@ export function LegalDisclaimer() {
 					<p>
 						The content on this website is provided for informational purposes
 						only and does not constitute financial, investment, tax, or legal
-						advice. InvestWise does not guarantee the accuracy, completeness, or
-						timeliness of the information provided. You should consult with
-						qualified professionals before making any investment decisions.
+						advice. Base Investment Group Limited does not guarantee the
+						accuracy, completeness, or timeliness of the information provided.
+						You should consult with qualified professionals before making any
+						investment decisions.
 					</p>
 					<p>
 						Past performance is not indicative of future results. The value of
@@ -54,41 +55,43 @@ export function LegalDisclaimer() {
 
 					<h3>Website Disclaimer</h3>
 					<p>
-						InvestWise makes no representations or warranties of any kind,
-						express or implied, about the completeness, accuracy, reliability,
-						suitability, or availability of the website or the information,
-						products, services, or related graphics contained on the website for
-						any purpose. Any reliance you place on such information is therefore
-						strictly at your own risk.
+						Base Investment Group Limited makes no representations or warranties
+						of any kind, express or implied, about the completeness, accuracy,
+						reliability, suitability, or availability of the website or the
+						information, products, services, or related graphics contained on
+						the website for any purpose. Any reliance you place on such
+						information is therefore strictly at your own risk.
 					</p>
 					<p>
-						In no event will InvestWise be liable for any loss or damage
-						including without limitation, indirect or consequential loss or
-						damage, or any loss or damage whatsoever arising from loss of data
-						or profits arising out of, or in connection with, the use of this
-						website.
+						In no event will Base Investment Group Limited be liable for any
+						loss or damage including without limitation, indirect or
+						consequential loss or damage, or any loss or damage whatsoever
+						arising from loss of data or profits arising out of, or in
+						connection with, the use of this website.
 					</p>
 
 					<h3>Third-Party Links</h3>
 					<p>
 						This website may contain links to third-party websites or services
-						that are not owned or controlled by InvestWise. InvestWise has no
-						control over, and assumes no responsibility for, the content,
-						privacy policies, or practices of any third-party websites or
-						services. You further acknowledge and agree that InvestWise shall
-						not be responsible or liable, directly or indirectly, for any damage
-						or loss caused or alleged to be caused by or in connection with the
-						use of or reliance on any such content, goods, or services available
-						on or through any such websites or services.
+						that are not owned or controlled by Base Investment Group Limited.
+						Base Investment Group Limited has no control over, and assumes no
+						responsibility for, the content, privacy policies, or practices of
+						any third-party websites or services. You further acknowledge and
+						agree that Base Investment Group Limited shall not be responsible or
+						liable, directly or indirectly, for any damage or loss caused or
+						alleged to be caused by or in connection with the use of or reliance
+						on any such content, goods, or services available on or through any
+						such websites or services.
 					</p>
 
 					<h3>Tax Disclaimer</h3>
 					<p>
 						The information provided on this website does not constitute tax
 						advice. You should consult with a tax professional regarding your
-						specific circumstances before making any tax-related decisions.
-						InvestWise does not provide tax advice and is not responsible for
-						any tax consequences that may result from your investment decisions.
+						specific circumstances before making any tax-related decisions. Base
+						Investment Group Limited does not provide tax advice and is not
+						responsible for any tax consequences that may result from your
+						investment decisions.
 					</p>
 				</CardContent>
 			</Card>

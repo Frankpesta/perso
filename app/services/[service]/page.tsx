@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	}
 
 	return {
-		title: `${serviceData.title} | InvestWise`,
+		title: `${serviceData.title} | Base Investment Group Limited`,
 		description: serviceData.description,
 	};
 }

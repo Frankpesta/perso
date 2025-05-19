@@ -6,9 +6,9 @@ import { LegalDisclaimer } from "@/components/legal/legal-disclaimer";
 import { LegalContact } from "@/components/legal/legal-contact";
 
 export const metadata = {
-	title: "Legal Information | InvestWise",
+	title: "Legal Information | Base Investment Group Limited",
 	description:
-		"Legal information, regulatory details, and disclaimers for InvestWise investment services",
+		"Legal information, regulatory details, and disclaimers for Base Investment Group Limited investment services",
 };
 
 export default function LegalPage() {

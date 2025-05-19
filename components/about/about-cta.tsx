@@ -39,8 +39,8 @@ export function AboutCta() {
 			</h3>
 			<p className="about-cta-animate opacity-0 text-muted-foreground mb-8 max-w-2xl mx-auto">
 				Be part of our mission to democratize investing and build a better
-				financial future for everyone. Start your investment journey with
-				InvestWise today.
+				financial future for everyone. Start your investment journey with Base
+				Investment Group Limited today.
 			</p>
 			<div className="about-cta-animate opacity-0 flex flex-col sm:flex-row justify-center gap-4">
 				<Button size="lg" asChild>

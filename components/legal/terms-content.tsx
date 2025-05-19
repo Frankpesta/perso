@@ -36,18 +36,19 @@ export function TermsContent() {
 				<CardContent className="p-6 md:p-8 prose dark:prose-invert max-w-none">
 					<h2>1. Introduction</h2>
 					<p>
-						These Terms and Conditions ("Terms") govern your use of the
-						InvestWise website, mobile applications, and investment services
-						(collectively, the "Services") operated by InvestWise, Inc.
-						("InvestWise," "we," "us," or "our"). By accessing or using our
-						Services, you agree to be bound by these Terms. If you disagree with
-						any part of the Terms, you may not access the Services.
+						These Terms and Conditions ("Terms") govern your use of the Base
+						Investment Group Limited website, mobile applications, and
+						investment services (collectively, the "Services") operated by Base
+						Investment Group Limited, Inc. ("Base Investment Group Limited,"
+						"we," "us," or "our"). By accessing or using our Services, you agree
+						to be bound by these Terms. If you disagree with any part of the
+						Terms, you may not access the Services.
 					</p>
 
 					<h2>2. Definitions</h2>
 					<p>
-						<strong>"Account"</strong> means a user account created on the
-						InvestWise platform.
+						<strong>"Account"</strong> means a user account created on the Base
+						Investment Group Limited platform.
 						<br />
 						<strong>"Content"</strong> means any information, text, graphics, or
 						other materials uploaded, downloaded, or appearing on the Services.
@@ -95,9 +96,9 @@ export function TermsContent() {
 					<p>
 						Before making any investment, you should carefully consider your
 						investment objectives, level of experience, and risk appetite. If
-						necessary, seek independent financial advice. InvestWise does not
-						provide personalized investment advice unless explicitly stated and
-						agreed upon in a separate written agreement.
+						necessary, seek independent financial advice. Base Investment Group
+						Limited does not provide personalized investment advice unless
+						explicitly stated and agreed upon in a separate written agreement.
 					</p>
 
 					<h2>6. Fees and Payments</h2>
@@ -148,33 +149,34 @@ export function TermsContent() {
 					<h2>8. Intellectual Property</h2>
 					<p>
 						The Services and their original content, features, and functionality
-						are owned by InvestWise and are protected by international
-						copyright, trademark, patent, trade secret, and other intellectual
-						property laws. You may not copy, modify, create derivative works,
-						publicly display, publicly perform, republish, or transmit any
-						material from our Services without our prior written consent.
+						are owned by Base Investment Group Limited and are protected by
+						international copyright, trademark, patent, trade secret, and other
+						intellectual property laws. You may not copy, modify, create
+						derivative works, publicly display, publicly perform, republish, or
+						transmit any material from our Services without our prior written
+						consent.
 					</p>
 
 					<h2>9. Third-Party Links and Services</h2>
 					<p>
 						Our Services may contain links to third-party websites or services
-						that are not owned or controlled by InvestWise. We have no control
-						over and assume no responsibility for the content, privacy policies,
-						or practices of any third-party websites or services. You
-						acknowledge and agree that InvestWise shall not be responsible or
-						liable for any damage or loss caused by or in connection with the
-						use of any such content, goods, or services available through
-						third-party websites or services.
+						that are not owned or controlled by Base Investment Group Limited.
+						We have no control over and assume no responsibility for the
+						content, privacy policies, or practices of any third-party websites
+						or services. You acknowledge and agree that Base Investment Group
+						Limited shall not be responsible or liable for any damage or loss
+						caused by or in connection with the use of any such content, goods,
+						or services available through third-party websites or services.
 					</p>
 
 					<h2>10. Limitation of Liability</h2>
 					<p>
-						To the maximum extent permitted by law, InvestWise and its
-						directors, employees, partners, agents, suppliers, or affiliates
-						shall not be liable for any indirect, incidental, special,
-						consequential, or punitive damages, including without limitation,
-						loss of profits, data, use, goodwill, or other intangible losses,
-						resulting from:
+						To the maximum extent permitted by law, Base Investment Group
+						Limited and its directors, employees, partners, agents, suppliers,
+						or affiliates shall not be liable for any indirect, incidental,
+						special, consequential, or punitive damages, including without
+						limitation, loss of profits, data, use, goodwill, or other
+						intangible losses, resulting from:
 					</p>
 					<ul>
 						<li>
@@ -230,13 +232,13 @@ export function TermsContent() {
 
 					<h2>15. Indemnification</h2>
 					<p>
-						You agree to defend, indemnify, and hold harmless InvestWise and its
-						licensees and licensors, and their employees, contractors, agents,
-						officers, and directors, from and against any and all claims,
-						damages, obligations, losses, liabilities, costs or debt, and
-						expenses (including but not limited to attorney's fees), resulting
-						from or arising out of your use and access of the Services, or your
-						violation of these Terms.
+						You agree to defend, indemnify, and hold harmless Base Investment
+						Group Limited and its licensees and licensors, and their employees,
+						contractors, agents, officers, and directors, from and against any
+						and all claims, damages, obligations, losses, liabilities, costs or
+						debt, and expenses (including but not limited to attorney's fees),
+						resulting from or arising out of your use and access of the
+						Services, or your violation of these Terms.
 					</p>
 
 					<h2>16. Severability</h2>
@@ -250,10 +252,10 @@ export function TermsContent() {
 
 					<h2>17. Entire Agreement</h2>
 					<p>
-						These Terms constitute the entire agreement between you and
-						InvestWise regarding our Services and supersede and replace any
-						prior agreements we might have had between us regarding the
-						Services.
+						These Terms constitute the entire agreement between you and Base
+						Investment Group Limited regarding our Services and supersede and
+						replace any prior agreements we might have had between us regarding
+						the Services.
 					</p>
 
 					<h2>18. Contact Information</h2>
@@ -261,13 +263,13 @@ export function TermsContent() {
 						If you have any questions about these Terms, please contact us at:
 						<br />
 						<br />
-						InvestWise, Inc.
+						Base Investment Group Limited, Inc.
 						<br />
 						123 Wall Street, Suite 1500
 						<br />
 						New York, NY 10005
 						<br />
-						Email: legal@investwise.com
+						Email: legal@Base Investment Group Limited.com
 						<br />
 						Phone: +1 (212) 555-0123
 					</p>
