@@ -31,6 +31,9 @@ export function CtaSection() {
 
 		return () => observer.disconnect();
 	}, []);
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
 
 	return (
 		<section
@@ -46,11 +49,9 @@ export function CtaSection() {
 					wealth today.
 				</p>
 				<div className="cta-animate opacity-0 flex flex-col sm:flex-row justify-center gap-4">
-					<Button size="lg" variant="secondary" asChild>
-						<Link href="/signup">
-							Create an account
-							<ArrowRight className="ml-2 h-4 w-4" />
-						</Link>
+					<Button size="lg" variant="secondary" onClick={handleSignup}>
+						Create an account
+						<ArrowRight className="ml-2 h-4 w-4" />
 					</Button>
 					<Button
 						size="lg"

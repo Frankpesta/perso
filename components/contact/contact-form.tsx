@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useState, useEffect, useRef } from "react";
 import {
 	Card,
@@ -23,10 +21,13 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { animate } from "animejs";
+import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
 	const [isLoading, setIsLoading] = useState(false);
-	const formRef = useRef<HTMLDivElement>(null);
+	const formRef = useRef<HTMLFormElement>(null);
+	const sectionRef = useRef<HTMLDivElement>(null);
+	const [subject, setSubject] = useState("");
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -44,26 +45,40 @@ export function ContactForm() {
 			{ threshold: 0.1 }
 		);
 
-		if (formRef.current) {
-			observer.observe(formRef.current);
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
 		}
 
 		return () => observer.disconnect();
 	}, []);
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsLoading(true);
 
-		// Simulate form submission
-		setTimeout(() => {
+		if (!formRef.current) return;
+
+		try {
+			await emailjs.sendForm(
+				"service_3po2ikr", // Replace with your actual service ID
+				"template_22ckzyc", // Replace with your actual template ID
+				formRef.current,
+				"4pYHB_yDU0rpsWdlY" // Replace with your actual public API key
+			);
+
+			toast.success("Message sent successfully!");
+			formRef.current.reset();
+			setSubject(""); // reset select
+		} catch (error) {
+			console.error(error);
+			toast.error("Failed to send message. Please try again.");
+		} finally {
 			setIsLoading(false);
-			toast("We have received your message and we will get back to you soon.");
-		}, 1500);
+		}
 	};
 
 	return (
-		<div ref={formRef}>
+		<div ref={sectionRef}>
 			<Card className="form-animate opacity-0">
 				<CardHeader>
 					<CardTitle>Send us a message</CardTitle>
@@ -73,11 +88,12 @@ export function ContactForm() {
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
-					<form onSubmit={handleSubmit} className="space-y-6">
+					<form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
 						<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
 							<div className="space-y-2">
 								<Label htmlFor="first-name">First name</Label>
 								<Input
+									name="first_name"
 									id="first-name"
 									placeholder="John"
 									required
@@ -87,6 +103,7 @@ export function ContactForm() {
 							<div className="space-y-2">
 								<Label htmlFor="last-name">Last name</Label>
 								<Input
+									name="last_name"
 									id="last-name"
 									placeholder="Doe"
 									required
@@ -97,6 +114,7 @@ export function ContactForm() {
 						<div className="space-y-2">
 							<Label htmlFor="email">Email</Label>
 							<Input
+								name="email"
 								id="email"
 								type="email"
 								placeholder="john.doe@example.com"
@@ -107,6 +125,7 @@ export function ContactForm() {
 						<div className="space-y-2">
 							<Label htmlFor="phone">Phone number (optional)</Label>
 							<Input
+								name="phone"
 								id="phone"
 								type="tel"
 								placeholder="+1 (555) 000-0000"
@@ -115,22 +134,35 @@ export function ContactForm() {
 						</div>
 						<div className="space-y-2">
 							<Label htmlFor="subject">Subject</Label>
-							<Select disabled={isLoading}>
+							<Select
+								disabled={isLoading}
+								value={subject}
+								onValueChange={(value) => setSubject(value)}>
 								<SelectTrigger id="subject">
 									<SelectValue placeholder="Select a subject" />
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem value="general">General Inquiry</SelectItem>
-									<SelectItem value="support">Technical Support</SelectItem>
-									<SelectItem value="account">Account Management</SelectItem>
-									<SelectItem value="investment">Investment Advice</SelectItem>
-									<SelectItem value="feedback">Feedback</SelectItem>
+									<SelectItem value="General Inquiry">
+										General Inquiry
+									</SelectItem>
+									<SelectItem value="Technical Support">
+										Technical Support
+									</SelectItem>
+									<SelectItem value="Account Management">
+										Account Management
+									</SelectItem>
+									<SelectItem value="Investment Advice">
+										Investment Advice
+									</SelectItem>
+									<SelectItem value="Feedback">Feedback</SelectItem>
 								</SelectContent>
 							</Select>
+							<input type="hidden" name="subject" value={subject} />
 						</div>
 						<div className="space-y-2">
 							<Label htmlFor="message">Message</Label>
 							<Textarea
+								name="message"
 								id="message"
 								placeholder="How can we help you?"
 								rows={5}

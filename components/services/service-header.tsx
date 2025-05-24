@@ -30,6 +30,10 @@ export function ServiceHeader({
 		}
 	}, []);
 
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
+
 	return (
 		<div
 			ref={headerRef}
@@ -42,8 +46,8 @@ export function ServiceHeader({
 					{description}
 				</p>
 				<div className="service-header-animate opacity-0 flex flex-col sm:flex-row gap-4">
-					<Button size="lg" asChild>
-						<Link href="/signup">Get started</Link>
+					<Button size="lg" onClick={handleSignup}>
+						Get started
 					</Button>
 					<Button size="lg" variant="outline" asChild>
 						<Link href="/plans">View plans</Link>

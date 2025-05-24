@@ -37,21 +37,21 @@ export function PlanTestimonials() {
 				"The Starter plan was perfect for me to start my investment journey. The educational resources helped me understand the market better.",
 			author: "Alex Johnson",
 			title: "Basic Plan User",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/4.jpg",
 		},
 		{
 			quote:
 				"Upgrading to the Contract plan was a game-changer. The monthly portfolio rebalancing and tax optimization features have significantly improved my returns.",
 			author: "Sarah Williams",
 			title: "Standard Plan User",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/1.jpg",
 		},
 		{
 			quote:
 				"As an Ultimate plan user, having a dedicated advisor has made all the difference. The personalized strategies have helped me achieve my financial goals faster than I expected.",
 			author: "Michael Chen",
 			title: "Premium Plan User",
-			image: "/placeholder.svg?height=80&width=80",
+			image: "/2.jpg",
 		},
 	];
 

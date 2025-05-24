@@ -32,6 +32,9 @@ export function AboutCta() {
 		return () => observer.disconnect();
 	}, []);
 
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
 	return (
 		<div ref={ctaRef} className="bg-muted rounded-lg p-8 md:p-12 text-center">
 			<h3 className="about-cta-animate opacity-0 text-2xl font-bold mb-4">
@@ -43,11 +46,9 @@ export function AboutCta() {
 				Investment Group Limited today.
 			</p>
 			<div className="about-cta-animate opacity-0 flex flex-col sm:flex-row justify-center gap-4">
-				<Button size="lg" asChild>
-					<Link href="/signup">
-						Get started
-						<ArrowRight className="ml-2 h-4 w-4" />
-					</Link>
+				<Button size="lg" onClick={handleSignup}>
+					Get started
+					<ArrowRight className="ml-2 h-4 w-4" />
 				</Button>
 				<Button size="lg" variant="outline" asChild>
 					<Link href="/contact">Contact us</Link>

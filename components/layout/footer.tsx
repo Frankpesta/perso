@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
 export function Footer() {
 	return (
@@ -9,18 +9,13 @@ export function Footer() {
 				<div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					<div className="space-y-4">
 						<div className="flex items-center space-x-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								className="h-6 w-6">
-								<path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-							</svg>
-							<span className="font-bold">Base Investment Group Limited</span>
+							<Image
+								src="/logo.png"
+								alt="Base Investment Logo"
+								width={150}
+								height={500}
+								className="object-cover"
+							/>
 						</div>
 						<p className="text-sm text-muted-foreground">
 							Building financial futures through smart investments.
@@ -136,13 +131,13 @@ export function Footer() {
 									Plans
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link
 									href="/insights"
 									className="text-muted-foreground hover:text-foreground transition-colors">
 									Insights
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link
 									href="/faq"

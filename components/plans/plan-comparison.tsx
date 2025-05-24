@@ -9,8 +9,77 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { Check, X } from "lucide-react";
+import { CheckIcon, X } from "lucide-react";
 import { animate } from "animejs";
+
+// Imported or defined plans array
+const plans = [
+	{
+		name: "Starter Plan",
+		price: "$200",
+		description: "For those beginning their investment journey.",
+		features: [
+			"Min $200 - Max $2,000",
+			"60% ROI monthly",
+			"2% ROI daily",
+			"Weekly withdrawal by wallet",
+			"Committed portfolio manager",
+			"25% service commission",
+			"Investment duration: 60 days",
+			"30% capital insurance",
+			"10% referral rate",
+		],
+	},
+	{
+		name: "Rush Plan",
+		price: "$3,000",
+		description: "Accelerated returns for focused investors.",
+		features: [
+			"Min $3,000 - Max $5,000",
+			"66% ROI monthly",
+			"2.2% ROI daily",
+			"Weekly withdrawal by wallet",
+			"Committed portfolio manager",
+			"25% service commission",
+			"Investment duration: 90 days",
+			"30% capital insurance",
+			"10% referral rate",
+		],
+		popular: true,
+	},
+	{
+		name: "Contract Plan",
+		price: "$10,000",
+		description: "Strategic contract-based wealth building.",
+		features: [
+			"Min $10,000 - Max $30,000",
+			"90% ROI monthly",
+			"3% ROI daily",
+			"Weekly withdrawal by wallet",
+			"Committed portfolio manager",
+			"25% service commission",
+			"Investment duration: 180 days",
+			"30% capital insurance",
+			"15% referral rate",
+		],
+	},
+	{
+		name: "Ultimate Plan",
+		price: "$50,000",
+		description: "Elite investors with maximum potential returns.",
+		features: [
+			"Min $50,000 - Max $100,000",
+			"100% ROI monthly",
+			"3.5% ROI daily",
+			"Weekly withdrawal by wallet",
+			"Committed portfolio manager",
+			"25% service commission",
+			"Investment duration: 250 days",
+			"30% capital insurance",
+			"20% referral rate",
+		],
+	},
+];
 
 export function PlanComparison() {
 	const comparisonRef = useRef<HTMLDivElement>(null);
@@ -39,8 +108,10 @@ export function PlanComparison() {
 		return () => observer.disconnect();
 	}, []);
 
-	const CheckIcon = <Check className="h-5 w-5 text-primary" />;
-	const XIcon = <X className="h-5 w-5 text-muted-foreground" />;
+	// Collect all unique features
+	const allFeatures = Array.from(
+		new Set(plans.flatMap((plan) => plan.features))
+	);
 
 	return (
 		<div ref={comparisonRef} className="mb-16">
@@ -52,73 +123,39 @@ export function PlanComparison() {
 				<Table>
 					<TableHeader>
 						<TableRow>
-							<TableHead className="w-[220px]">Feature</TableHead>
-							<TableHead>Basic</TableHead>
-							<TableHead>Standard</TableHead>
-							<TableHead>Premium</TableHead>
+							<TableHead className="w-[250px]">Features</TableHead>
+							{plans.map((plan) => (
+								<TableHead key={plan.name}>
+									<div className="flex flex-col">
+										<span className="font-semibold">{plan.name}</span>
+										<span className="text-sm">{plan.price}</span>
+										{plan.popular && (
+											<span className="text-xs text-primary font-bold">
+												★ Popular
+											</span>
+										)}
+									</div>
+								</TableHead>
+							))}
 						</TableRow>
 					</TableHeader>
 					<TableBody>
-						<TableRow>
-							<TableCell className="font-medium">Investment Options</TableCell>
-							<TableCell>Limited</TableCell>
-							<TableCell>Expanded</TableCell>
-							<TableCell>All Markets</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">Advisory Services</TableCell>
-							<TableCell>{XIcon}</TableCell>
-							<TableCell>Basic Support</TableCell>
-							<TableCell>Dedicated Advisor</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">Market Analysis</TableCell>
-							<TableCell>Weekly Reports</TableCell>
-							<TableCell>Daily Insights</TableCell>
-							<TableCell>Real-Time Updates</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">
-								Portfolio Rebalancing
-							</TableCell>
-							<TableCell>Quarterly</TableCell>
-							<TableCell>Monthly</TableCell>
-							<TableCell>Weekly</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">Tax Optimization</TableCell>
-							<TableCell>{XIcon}</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">
-								Educational Resources
-							</TableCell>
-							<TableCell>Basic Guides</TableCell>
-							<TableCell>Advanced Modules</TableCell>
-							<TableCell>Full Academy Access</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">Customer Support</TableCell>
-							<TableCell>Email Only</TableCell>
-							<TableCell>Email & Phone</TableCell>
-							<TableCell>24/7 Dedicated</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">Mobile App Access</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-						</TableRow>
-						<TableRow>
-							<TableCell className="font-medium">
-								Priority Access to New Features
-							</TableCell>
-							<TableCell>{XIcon}</TableCell>
-							<TableCell>{XIcon}</TableCell>
-							<TableCell>{CheckIcon}</TableCell>
-						</TableRow>
+						{allFeatures.map((feature) => (
+							<TableRow key={feature}>
+								<TableCell className="font-medium">{feature}</TableCell>
+								{plans.map((plan) => (
+									<TableCell key={plan.name + feature}>
+										{plan.features.includes(feature) ? (
+											<span>
+												<CheckIcon className="h-5 w-5 text-primary" />
+											</span>
+										) : (
+											<X className="h-5 w-5 text-muted-foreground" />
+										)}
+									</TableCell>
+								))}
+							</TableRow>
+						))}
 					</TableBody>
 				</Table>
 			</div>

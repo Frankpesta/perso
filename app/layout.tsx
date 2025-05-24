@@ -39,8 +39,12 @@ export default function RootLayout({
 						<main className="">{children}</main>
 						<Footer />
 					</div>
-					<Toaster />
+					<Toaster position="top-right" />
 				</ThemeProvider>
+				<script
+					id="chatway"
+					async={true}
+					src="https://cdn.chatway.app/widget.js?id=xFZo5DwDOY4a"></script>
 			</body>
 		</html>
 	);

@@ -116,6 +116,10 @@ export function PlanTabs() {
 		},
 	];
 
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
+
 	return (
 		<div ref={tabsRef} className="mb-16">
 			<h2 className="tabs-animate opacity-0 text-3xl font-bold mb-6 text-center">
@@ -163,9 +167,9 @@ export function PlanTabs() {
 										: "bg-muted text-foreground hover:bg-muted/80"
 								}
 								size="lg"
-								asChild
+								onClick={handleSignup}
 								variant={plan.popular ? "default" : "outline"}>
-								<Link href="/signup">Get started</Link>
+								Get started
 							</Button>
 						</CardFooter>
 					</Card>
