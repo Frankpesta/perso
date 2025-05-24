@@ -31,7 +31,7 @@ export function ServiceHeader({
 	}, []);
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvestment.com/register";
+		window.location.href = "https://app.baseinvst.com/register";
 	};
 
 	return (
