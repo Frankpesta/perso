@@ -33,6 +33,10 @@ export function HeroSection() {
 
 	const userImages = ["/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg"];
 
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
+
 	return (
 		<div ref={heroRef} className="relative overflow-hidden">
 			{/* Background dots */}
@@ -55,11 +59,9 @@ export function HeroSection() {
 							match your ambition.
 						</p>
 						<div className="hero-animate-item opacity-0 flex flex-col sm:flex-row gap-4">
-							<Button size="lg" asChild>
-								<Link href="/signup">
-									Get started
-									<ChevronRight className="ml-2 h-4 w-4" />
-								</Link>
+							<Button size="lg" onClick={handleSignup}>
+								Get started
+								<ChevronRight className="ml-2 h-4 w-4" />
 							</Button>
 							<Button size="lg" variant="outline" asChild>
 								<Link href="/plans">View plans</Link>

@@ -38,25 +38,25 @@ export function AboutTeam() {
 			name: "Sarah Johnson",
 			title: "CEO & Founder",
 			bio: "Former investment banker with 15+ years of experience in financial markets.",
-			image: "/placeholder.svg?height=300&width=300",
+			image: "/lead4.jpg",
 		},
 		{
 			name: "David Chen",
 			title: "Chief Investment Officer",
 			bio: "Veteran hedge fund manager with a track record of consistent returns.",
-			image: "/placeholder.svg?height=300&width=300",
+			image: "/lead2.webp",
 		},
 		{
-			name: "Maria Rodriguez",
+			name: "Carlos Rodriguez",
 			title: "Head of Technology",
 			bio: "Tech innovator with expertise in fintech and blockchain solutions.",
-			image: "/placeholder.svg?height=300&width=300",
+			image: "/lead1.jpg",
 		},
 		{
 			name: "James Wilson",
 			title: "Chief Financial Officer",
 			bio: "Certified financial analyst with experience at top global firms.",
-			image: "/placeholder.svg?height=300&width=300",
+			image: "/lead3.jpg",
 		},
 	];
 

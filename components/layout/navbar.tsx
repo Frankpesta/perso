@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { animate } from "animejs";
+import Image from "next/image";
 
 export function Navbar() {
 	const pathname = usePathname();
@@ -50,6 +51,14 @@ export function Navbar() {
 		}
 	}, [isMounted]);
 
+	const handleSignup = () => {
+		window.location.href = "https://app.baseinvestment.com/register";
+	};
+
+	const handleLogin = () => {
+		window.location.href = "https://app.baseinvestment.com/login";
+	};
+
 	return (
 		<header
 			className={cn(
@@ -61,20 +70,13 @@ export function Navbar() {
 			<div className="container flex h-16 items-center justify-between">
 				<div className="flex items-center gap-6 md:gap-10">
 					<Link href="/" className="flex items-center space-x-2">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							className="h-6 w-6">
-							<path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-						</svg>
-						<span className="hidden font-bold sm:inline-block">
-							Base Investment Group Limited
-						</span>
+						<Image
+							src="/logo.png"
+							alt="Base Investment Logo"
+							width={150}
+							height={150}
+							className="object-cover"
+						/>
 					</Link>
 					<NavigationMenu className="hidden md:flex">
 						<NavigationMenuList>
@@ -141,7 +143,7 @@ export function Navbar() {
 									</NavigationMenuLink>
 								</Link>
 							</NavigationMenuItem>
-							<NavigationMenuItem className="nav-item">
+							{/* <NavigationMenuItem className="nav-item">
 								<Link href="/insights" legacyBehavior passHref>
 									<NavigationMenuLink
 										className={navigationMenuTriggerStyle()}
@@ -149,7 +151,7 @@ export function Navbar() {
 										Insights
 									</NavigationMenuLink>
 								</Link>
-							</NavigationMenuItem>
+							</NavigationMenuItem> */}
 							<NavigationMenuItem className="nav-item">
 								<Link href="/about" legacyBehavior passHref>
 									<NavigationMenuLink
@@ -183,11 +185,15 @@ export function Navbar() {
 				<div className="flex items-center gap-2">
 					<ThemeToggle className="nav-item" />
 					<div className="hidden md:flex items-center gap-2">
-						<Button variant="ghost" size="sm" asChild className="nav-item">
-							<Link href="/login">Log in</Link>
+						<Button
+							onClick={handleLogin}
+							variant="ghost"
+							size="sm"
+							className="nav-item">
+							Log in
 						</Button>
-						<Button size="sm" asChild className="nav-item">
-							<Link href="/signup">Sign up</Link>
+						<Button onClick={handleSignup} size="sm" className="nav-item">
+							Sign up
 						</Button>
 					</div>
 					<Sheet>
@@ -243,11 +249,11 @@ export function Navbar() {
 										className="font-medium hover:text-foreground transition-colors">
 										Plans
 									</Link>
-									<Link
+									{/* <Link
 										href="/insights"
 										className="font-medium hover:text-foreground transition-colors">
 										Insights
-									</Link>
+									</Link> */}
 									<Link
 										href="/about"
 										className="font-medium hover:text-foreground transition-colors">
@@ -265,11 +271,9 @@ export function Navbar() {
 									</Link>
 								</div>
 								<div className="grid gap-2">
-									<Button asChild>
-										<Link href="/signup">Sign up</Link>
-									</Button>
-									<Button variant="outline" asChild>
-										<Link href="/login">Log in</Link>
+									<Button onClick={handleSignup}>Sign up</Button>
+									<Button onClick={handleLogin} variant="outline">
+										Log in
 									</Button>
 								</div>
 							</div>
