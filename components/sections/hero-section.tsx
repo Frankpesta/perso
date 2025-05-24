@@ -34,7 +34,7 @@ export function HeroSection() {
 	const userImages = ["/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg"];
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvestment.com/register";
+		window.location.href = "https://app.baseinvst.com/register";
 	};
 
 	return (
