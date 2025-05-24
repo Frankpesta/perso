@@ -11,9 +11,10 @@ import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Base Investment Group Limited | Modern Investment Platform",
+	title:
+		"Base Investment Group Limited | Smart, Secure & Profitable Investment Solutions",
 	description:
-		"A comprehensive investment platform for crypto, hedge funds, retirement planning, real estate, and children's investments",
+		"Unlock your financial future with Base Investment Group — expert-managed crypto, hedge funds, real estate, retirement, and kids' investment plans tailored for smart growth.",
 };
 
 export default function RootLayout({
