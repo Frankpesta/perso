@@ -19,6 +19,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { animate } from "animejs";
 import Image from "next/image";
+import { GoogleTranslate } from "@/components/google-translate";
 
 export function Navbar() {
 	const pathname = usePathname();
@@ -183,7 +184,11 @@ export function Navbar() {
 					</NavigationMenu>
 				</div>
 				<div className="flex items-center gap-2">
-					<ThemeToggle className="nav-item" />
+			<GoogleTranslate
+		className="inline-flex nav-item w-full max-w-[20vw] h-fit"
+		
+	/>	
+			<ThemeToggle className="nav-item" />
 					<div className="hidden md:flex items-center gap-2">
 						<Button
 							onClick={handleLogin}
@@ -208,6 +213,12 @@ export function Navbar() {
 						</SheetTrigger>
 						<SheetContent side="right" title="Menu">
 							<div className="grid gap-6 py-12 px-4">
+								<div className="flex justify-start">
+									<GoogleTranslate
+										className="nav-item w-full max-w-[220px]"
+										elementId="google_translate_element_mobile"
+									/>
+								</div>
 								<div className="grid gap-3">
 									<Link
 										href="/"

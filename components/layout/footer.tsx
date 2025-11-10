@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { GoogleTranslate } from "@/components/google-translate";
 
 export function Footer() {
 	return (
@@ -72,7 +73,7 @@ export function Footer() {
 								<span className="sr-only">Instagram</span>
 							</Button>
 						</div>
-					</div>
+								</div>
 					<div className="space-y-4">
 						<h4 className="text-sm font-medium">Services</h4>
 						<ul className="space-y-2 text-sm">
