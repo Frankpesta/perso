@@ -1,5 +1,3 @@
-import type React from "react";
-
 export type ServiceData = {
 	title: string;
 	description: string;

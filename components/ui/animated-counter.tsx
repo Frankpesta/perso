@@ -35,11 +35,13 @@ export function AnimatedCounter({
 	return (
 		<motion.span
 			ref={ref}
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any -- CSS var animation target
 			initial={{ "--current": 0 } as any}
 			animate={controls}
 			style={{}}
-			onUpdate={(latest) => {
-				const current = (latest as any)["--current"];
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any -- motion onUpdate payload
+			onUpdate={(latest: any) => {
+				const current = latest["--current"];
 				if (typeof current === "number") {
 					setDisplayValue(Math.round(current));
 				}

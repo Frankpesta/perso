@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { GoogleTranslate } from "@/components/google-translate";
 
 export function Footer() {
 	return (
