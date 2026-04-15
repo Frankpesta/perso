@@ -33,7 +33,7 @@ export function AboutCta() {
 	}, []);
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvst.com/register";
+		window.location.href = "https://app.baseinnvst.com/register";
 	};
 	return (
 		<div ref={ctaRef} className="bg-muted rounded-lg p-8 md:p-12 text-center">

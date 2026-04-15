@@ -269,7 +269,7 @@ export function TermsContent() {
 						<br />
 						New York, NY 10005
 						<br />
-						Email:support@baseinvst.com
+						Email:support@baseinnvst.com
 						<br />
 						Phone: +1 (212) 555-0123
 					</p>

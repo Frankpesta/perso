@@ -36,7 +36,7 @@ export function ContactOffices() {
 			city: "Scotland",
 			address: "4 Milne Drive, Redding, Falkirk, Scotland",
 			phone: "+1 (212) 555-1234",
-			email: "support@baseinvst.com",
+			email: "support@baseinnvst.com",
 		},
 	];
 

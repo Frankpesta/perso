@@ -117,7 +117,7 @@ export function PlanTabs() {
 	];
 
 	const handleSignup = () => {
-		window.location.href = "https://app.baseinvst.com/register";
+		window.location.href = "https://app.baseinnvst.com/register";
 	};
 
 	return (
